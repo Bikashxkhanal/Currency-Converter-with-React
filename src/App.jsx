@@ -1,27 +1,42 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./App.css";
 import { CurrencyContainer } from "./components/currencybox";
 import useCurrencyInfo from "./hooks/useCurrencyInfo";
 
 function App() {
+  //amount for from
   const [amount, setAmount] = useState(0);
+  const [triggerConvert, setTrigerConvert] = useState(false);
   const [from, setFrom] = useState("usd");
   const [to, setTo] = useState("npr");
+
+  //amount for to
   const [convertAmt, setConvertAmt] = useState(0);
 
   const currencyInfo = useCurrencyInfo(from);
   const currencyoptions = Object.keys(currencyInfo);
 
+
+  useEffect(()=> {
+    if(triggerConvert){
+      convert();
+      setTrigerConvert(false);
+
+    }
+    
+  }, [amount, triggerConvert])
+ 
+
   const convert = () => {
     setConvertAmt(amount * currencyInfo[to]);
   };
 
-  function swap() {
-    setFrom(to);
-    setTo(from);
-    setAmount(convertAmt);
-    setConvertAmt(amount);
-  }
+ const swap = () =>{
+  setAmount(convertAmt);
+  setTrigerConvert(true);
+
+ }
+   
 
   return (
     <>
