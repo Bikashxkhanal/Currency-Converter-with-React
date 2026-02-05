@@ -1,16 +1,63 @@
-# React + Vite
+React Currency Converter
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Live Demo <<https://currency-converter-with-react-six.vercel.app/>>
 
-Currently, two official plugins are available:
+Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The React Currency Converter is a modern web application that allows users to convert currencies in real-time using live exchange rates. Built entirely with React, this project demonstrates the use of functional components, hooks, custom hooks, API integration, and responsive design principles to create a dynamic and user-friendly experience.
 
-## React Compiler
+Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Convert between multiple currencies using up-to-date exchange rates.
 
-## Expanding the ESLint configuration
+Instant conversion as users type in values.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Handles invalid inputs and API errors gracefully.
+
+Clean, responsive, and mobile-friendly UI.
+
+Reusable components for easy maintenance and scalability.
+
+What I Learned
+
+This project helped me strengthen my knowledge and hands-on skills in React, including:
+
+State Management with Hooks
+
+Using useState to manage input values, selected currencies, and conversion results.
+
+Using useEffect to fetch live currency data and update the UI dynamically.
+
+Custom Hooks
+
+Creating reusable logic for API calls, loading states, and error handling.
+
+Encapsulating currency conversion logic for cleaner and modular code.
+
+Component-Based Architecture
+
+Designing a modular structure with reusable and maintainable components.
+
+Passing data efficiently between components using props.
+
+Event Handling & User Input
+
+Handling input changes, selection events, and form interactions.
+
+Validating user inputs and updating conversions in real-time.
+
+Conditional Rendering
+
+Displaying loading states, error messages, or conversion results dynamically.
+
+API Integration
+
+Fetching live currency exchange rates from a third-party API.
+
+Handling asynchronous operations and errors gracefully.
+
+Styling & Responsive Design
+
+Applying CSS for a clean, user-friendly interface.
+
+Ensuring the app works seamlessly across desktop and mobile screens.
